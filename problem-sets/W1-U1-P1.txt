@@ -1,0 +1,53 @@
+﻿Zuri Ye, William Zhu, Saviandra Trevino, Chang Yu, Ronak Kelkar
+
+
+W1-U1 Drone Architecture Review
+Questions: https://github.com/BWSI-UAV/laboratory/blob/master/architecture_review/problem_set.md
+
+
+1. What are some of the differences between a research and development drone vs other "commercial" or "toy" drones? 
+R&D drones are often custom-built for a specific purpose and highly modified with advanced sensors like LiDAR and thermal cameras, whereas commercial or toy drones usually have more basic sensors. R&D drones also often have the capability to fly autonomously and navigate complex environments and can have a much higher payload capacity than commercial or toy drones.
+
+
+   2. What are some current applications of autonomous drones? Can you think of any future applications as technology improves (e.g. faster, smaller, more efficient computers)?
+Current applications of autonomous drones include fire fighting, shipping, fighting crime, military defense and offense, and search and rescue. As technology improves, drones will be used further in bigger military operations, more daily life applications, building cleaning, photography, and bombings.
+
+
+      3. Describe the difference between the Compute Board and Flight Controller. What purposes do each serve? What operating systems do each run?
+A compute board is essentially a miniature computer with a processor, memory, and storage that runs Linux and handles code written by the drone operators. A flight computer is a more specialized computer for controlling UAV’s and controls the motors and other sensors to keep the drone stable and perform its mission.
+
+
+         4. Which communication architecture are we using to connect are computers to the drone: Peer2Peer or centralized? What about the remote control - drone communication?
+The centralization of the communication architecture between both the computer and drone and the remote control to the drone both depend on how the system is set up. It is generally not centralized because not every part of the drone connects to one centralized place: most high level calculations are done in the raspberry pi/compute board, but there are some sensors that connect directly to the flight controller. For the remote control to drone communication, the communication is one way—from the remote control to the drone—so it also isn’t centralized. At the same time, neither of these are Peer2Peer because while some components might see each other as peers, there are also many more, such as the remote control to the drone, that don’t consider themselves peers because they are not of the same type/don’t perform the same role.
+
+
+         5. True or False: For manual flight control, the remote control communicates with the drone over wifi.
+False, the receiver utilizes radio frequencies to transmit signals to the drone.
+
+         6. In order to know where the drone is in the world, it needs some form of positioning sensor/algorithms, otherwise it would be flying blind. What are the different types of positioning sensors available? Which do you think we are going to use during the class?
+The types of positioning sensors available are RADAR, LiDAR, ultrasound, Halls effect, GPS and more. The ones we will be using in class are optical flow sensors, IMU’s, GPS, barometers, and radars.
+
+
+            7. True or False: during our indoor flights, we can use the GPS sensor to estimate the drone's position in the world.
+It depends: GPS sensor alone may not be accurate enough to guide the drone, so we need to use the GPS data in tandem with other positional sensors.
+
+            8. Are optical flow algorithms responsible for mapping the environment? If not, can you describe conceptually what optical flow does?
+Optical flow is an analysis of motion (of edges, objects, surfaces, patterns, etc.) between consecutive frames captured by a camera. The observed motion produces movement information via velocity vectors - i.e. optical flow.
+               9. Which potential sensors on a Drone enables 3D visual mapping? 
+RADAR, LiDAR, and cameras can enable 3D visual mapping for a drone. Using the deflections of radio waves and lasers, RADAR and LiDAR each can find the distances to nearby objects and create a 3D visual mapping of the surroundings. Cameras can also take images of the surroundings which can be processed and converted into 3D visual mapping of the surroundings.
+
+
+               10. How does the Compute Board communicate with the Flight Controller? 
+The computer board communicates with the flight controller using MAVLINK.
+
+
+               11. What is PX4 and where is it running on the drone? 
+PX4 is a software that is run on the flight controller of the drone.
+
+
+               12. Which of these best describes MAVLink: 1. an operating system used on the drone, 2. a sensor on the drone, 3. a communication protocol on the drone, 4. a programming language? 
+3.  a communication protocol on the drone
+
+
+               13. If I want to write a new, complex computer vision algorithm for the drone, should I add it to the Flight Controller firmware? if not, where should I add it and why? 
+No, you should add it to the companion computer because it can handle the increasingly complicated calculations required for a more complex algorithm.
