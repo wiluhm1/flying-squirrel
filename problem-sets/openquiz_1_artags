@@ -1,0 +1,31 @@
+1. **What are AR tags and how do they function in augmented reality applications?**
+AR tags are visual cues that have specific visual patterns or features that make them easily identifiable by computer vision algorithms. In augmented reality applications, content can be extracted from the tag based on the information it conveys and then overlaid onto the real-world view.
+
+2. **How do AR tags differ from QR codes and traditional barcodes in terms of technology and application?**
+AR tags are different from QR codes and traditional barcodes in many ways. Traditional barcodes are superior for retail and inventory management, while QR Codes are widely usable on most devices and can store large amounts of information. AR tags, on the other hand, overlay digital content in the real world and trigger augmented reality in phones. Unlike Barcodes and QR codes, AR tags do not store data directly, instead they act as markers that trigger content from elsewhere.
+
+
+3. **What are the common use cases for AR tags in various industries, such as retail, education, and manufacturing?**
+In retail, AR tags let customers try on clothing virtually before having to purchase. Educators use AR to interact with educational topics that are realistically intangible such as the solar system, historical landmarks, etc. Many manufacturers use AR tags to replace traditional manuals. By scanning the tag, customers are brought to a digital manual.
+
+4. **How do AR tags facilitate object recognition and tracking in augmented reality environments?**
+AR tags provide a stable reference point for the computer to understand the size, position, and orientation of the object in the real world so it can overlay it correctly.
+
+5. **What are the key technical specifications and requirements for creating and using AR tags?**
+When creating AR tags, computer vision is needed to analyze them and look at feature points. Accordingly, AR tag images also function best when they are irregular and distinctive: a repeated pattern may be time consuming for a computer to determine the orientation of the marker. For usage, users need a compatible application.
+
+6. **What software tools and libraries are commonly used for generating and reading AR tags?**
+For generating an AR tag, the opencv-contrib-python, which has extra modules outside of opencv-python, needs to be installed. To read the AR tags the ArUco library has the ability to detect AR in pictures.
+
+
+7. **How do lighting conditions and physical obstructions affect the performance of AR tags?**
+AR tags typically work by having easily identifiable features for the computer to process such as April tags that have distinct rectangles. Poor lighting conditions and physical obstructions can negatively affect the performance of AR tags because it makes differentiating the features of the tags from the surrounding objects or obstructions more difficult.
+
+8. **What are the security and privacy considerations when using AR tags in public or sensitive environments?**
+The spatial mapping of AR sensors could capture sensitive or unwanted details about the environment if used in a public place. People might not want to be recorded, or certain facilities might have policies against video recording.
+
+9. **Can AR tags be customized or branded, and how does this affect their readability and effectiveness?**
+Yes, AR tags can be customized or branded; however, it will affect their readability so AR tags must stay high contrast and a consistent size and shape because the pattern recognition for AR tags depend on this.
+
+10. **What are the future trends and developments in AR tag technology and its integration with other emerging technologies like AI and IoT?**
+One of the most prevalent recent integration of AR tag technology has been with AI. Recent development of AI has allowed for improved detection and identification as well as rapid mapping of surroundings based on AR tags. It also has allowed small mobile devices to read AR tags and allows more users to utilize the capabilities of AR tags. AR technology also benefits IoT because it gives IoT devices precise positional information, allowing them to identify and track objects in the real world in real-time.
